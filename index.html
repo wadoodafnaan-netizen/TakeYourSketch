@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYS — Original Sketches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Grotesk:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #f1ede1;
+    --paper-dark: #e7e1d1;
+    --ink: #211f1a;
+    --graphite: #6b6659;
+    --graphite-light: #a19c8c;
+    --wax-red: #b23a26;
+    --line: #d8d1bd;
+    --white: #fbfaf6;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Space Grotesk', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Kalam', cursive;
+    font-weight:700;
+    margin:0;
+    color:var(--ink);
+  }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  @media (max-width:640px){
+    .wrap{ padding:0 20px; }
+  }
+
+  /* subtle paper grain */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:0.4;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(0,0,0,0.045) 1px, transparent 0),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 340'%3E%3Cg fill='none' stroke='rgba(33,31,26,0.22)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 90 C 20 70, 28 35, 58 30 C 88 25, 105 45, 98 68 C 116 62, 128 78, 118 95 C 108 112, 78 115, 62 105 C 45 116, 25 108, 40 90 Z'/%3E%3Ccircle cx='58' cy='62' r='4' fill='rgba(33,31,26,0.22)'/%3E%3Ccircle cx='82' cy='66' r='4' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M60 82 C 68 90, 78 90, 86 82'/%3E%3Cpath d='M255 55 L 264 20 L 278 48 L 310 40 L 288 62 L 305 88 L 272 76 L 258 102 L 250 74 L 218 78 L 244 58 Z'/%3E%3Ccircle cx='262' cy='58' r='3.5' fill='rgba(33,31,26,0.22)'/%3E%3Ccircle cx='280' cy='58' r='3.5' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M264 68 C 270 74, 276 74, 282 68'/%3E%3Cpath d='M35 210 C 15 205, 15 180, 35 178 C 33 158, 62 155, 68 174 C 88 168, 100 190, 82 202 C 90 218, 68 232, 52 220 C 40 228, 25 222, 35 210 Z'/%3E%3Ccircle cx='42' cy='190' r='3.5' fill='rgba(33,31,26,0.22)'/%3E%3Ccircle cx='60' cy='188' r='3.5' fill='rgba(33,31,26,0.22)'/%3E%3Ccircle cx='72' cy='198' r='3.5' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M245 165 C 240 140, 265 122, 288 132 C 312 142, 315 168, 305 188 L 298 205 L 288 192 L 278 208 L 268 192 L 258 206 L 250 188 Z'/%3E%3Ccircle cx='268' cy='158' r='4' fill='rgba(33,31,26,0.22)'/%3E%3Ccircle cx='290' cy='158' r='4' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M55 260 L 100 260 C 106 260, 106 300, 100 305 L 55 305 C 49 305, 49 265, 55 260 Z'/%3E%3Cpath d='M65 248 L 65 260 M 90 248 L 90 260'/%3E%3Ccircle cx='68' cy='278' r='4' fill='rgba(33,31,26,0.22)'/%3E%3Ccircle cx='88' cy='278' r='4' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M62 292 L 70 298 L 78 290 L 86 298 L 94 292'/%3E%3Cpath d='M180 260 C 200 250, 220 270, 205 282 C 225 278, 235 298, 215 302 C 230 312, 215 328, 198 320 C 190 332, 168 325, 172 310 C 155 312, 150 292, 168 288 C 158 278, 168 258, 180 260 Z'/%3E%3Ccircle cx='192' cy='282' r='3.5' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M186 296 C 192 300, 200 300, 206 296'/%3E%3Cpath d='M230 250 C 245 255, 255 265, 270 262 C 285 259, 295 268, 310 264' /%3E%3Ccircle cx='230' cy='250' r='5' fill='none'/%3E%3Ccircle cx='230' cy='250' r='2' fill='rgba(33,31,26,0.22)'/%3E%3Cpath d='M140 40 C 150 35, 160 42, 155 52 C 165 50, 170 62, 158 66 C 162 76, 150 82, 143 74' /%3E%3Ccircle cx='148' cy='52' r='2.5' fill='rgba(33,31,26,0.22)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 3px 3px, 340px 340px;
+    background-repeat: repeat, repeat;
+    z-index:0;
+  }
+
+  header{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:rgba(241,237,225,0.88);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 0;
+  }
+
+  .logo{
+    font-family:'Kalam', cursive;
+    font-size:26px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .logo svg{ width:28px; height:28px; }
+
+  nav.links{
+    display:flex;
+    gap:28px;
+    font-size:15px;
+  }
+
+  nav.links a{
+    text-decoration:none;
+    position:relative;
+    padding-bottom:2px;
+  }
+  nav.links a::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:-2px;
+    height:1px;
+    background:var(--ink);
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .25s ease;
+  }
+  nav.links a:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+  .cart-btn{
+    border:1px solid var(--ink);
+    background:transparent;
+    padding:8px 16px;
+    border-radius: 9px 4px 8px 3px / 4px 8px 3px 9px;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .cart-btn:hover{ background:var(--ink); color:var(--paper); }
+
+  @media (max-width:720px){
+    nav.links{ display:none; }
+  }
+
+  .hero{
+    position:relative;
+    padding:70px 0 90px;
+    overflow:hidden;
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:50px;
+    align-items:center;
+  }
+
+  @media (max-width:860px){
+    .hero-grid{ grid-template-columns:1fr; }
+  }
+
+  .hero h1{
+    font-size:clamp(42px, 6vw, 68px);
+    line-height:1.05;
+    letter-spacing:-0.5px;
+  }
+
+  .hero p.lede{
+    margin-top:22px;
+    max-width:46ch;
+    font-size:18px;
+    color:var(--graphite);
+  }
+
+  .hero-cta{
+    margin-top:34px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 24px;
+    border-radius: 9px 4px 8px 3px / 4px 8px 3px 9px;
+    font-size:15px;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid var(--ink);
+    font-family:'Space Grotesk', sans-serif;
+  }
+  .btn-solid{ background:var(--ink); color:var(--paper); }
+  .btn-solid:hover{ background:#3a362c; }
+  .btn-ghost{ background:transparent; color:var(--ink); }
+  .btn-ghost:hover{ background:var(--paper-dark); }
+
+  .sketchpad{
+    position:relative;
+    background:var(--white);
+    border:1.5px solid var(--ink);
+    border-radius: 11px 4px 9px 3px / 4px 9px 3px 11px;
+    box-shadow: 0 18px 40px rgba(33,31,26,0.12);
+    padding:26px;
+    transform:rotate(1.2deg);
+  }
+  .sketchpad .tape{
+    position:absolute;
+    top:-14px; left:38px;
+    width:70px; height:28px;
+    background:rgba(220,210,180,0.75);
+    border:1px solid rgba(180,170,140,0.5);
+    transform:rotate(-4deg);
+  }
+
+  /* PRODUCT GRID */
+  .section{
+    padding:70px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:40px;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .section-head h2{
+    font-size:clamp(28px,4vw,38px);
+    position:relative;
+    display:inline-block;
+    padding-bottom:10px;
+  }
+  .section-head h2::after{
+    content:"";
+    position:absolute;
+    left:2px; bottom:0;
+    width:88%;
+    height:8px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12'%3E%3Cpath d='M2 6 C 12 -1, 22 13, 32 6 C 42 -1, 52 13, 62 6 C 72 -1, 82 13, 92 6 C 100 1, 108 10, 118 6' fill='none' stroke='%23211f1a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+  }
+
+  .section-head p{
+    color:var(--graphite);
+    max-width:40ch;
+    font-size:15px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  @media (max-width:860px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .grid{ grid-template-columns:1fr; } }
+
+  .card{
+    background:var(--white);
+    border:1.5px solid var(--ink);
+    border-radius: 11px 4px 9px 3px / 4px 9px 3px 11px;
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:nth-child(3n+1){ transform:rotate(-0.6deg); }
+  .card:nth-child(3n+2){ transform:rotate(0.5deg); }
+  .card:nth-child(3n+3){ transform:rotate(-0.3deg); }
+  .card:hover{
+    transform:translateY(-4px) rotate(0deg);
+    box-shadow:0 14px 30px rgba(33,31,26,0.10);
+  }
+
+  .card-art{
+    aspect-ratio:4/3;
+    border-bottom:1.5px solid var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(107,102,89,0.08) 28px);
+  }
+  .card-art svg{ width:72%; height:72%; }
+  .card-art img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .card-body{
+    padding:18px 20px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .card-title{
+    font-family:'Kalam', cursive;
+    font-size:20px;
+  }
+
+  .card-meta{
+    font-size:13px;
+    color:var(--graphite);
+  }
+
+  .card-foot{
+    margin-top:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .price{
+    font-size:16px;
+    font-weight:600;
+  }
+  .price .strike{
+    text-decoration:line-through;
+    color:var(--graphite-light);
+    font-weight:400;
+    margin-right:6px;
+    font-size:13px;
+  }
+
+  .add-btn{
+    background:transparent;
+    border:1px solid var(--ink);
+    padding:7px 14px;
+    font-size:13px;
+    border-radius: 9px 4px 8px 3px / 4px 8px 3px 9px;
+    cursor:pointer;
+    font-family:'Space Grotesk', sans-serif;
+  }
+  .add-btn:hover{ background:var(--ink); color:var(--paper); }
+
+  .sold{
+    color:var(--wax-red);
+    font-size:12px;
+    border:1px solid var(--wax-red);
+    padding:2px 8px;
+    border-radius:10px;
+    align-self:flex-start;
+  }
+
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:36px;
+  }
+  @media (max-width:760px){ .steps{ grid-template-columns:1fr; } }
+
+  .members-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:24px;
+  }
+  @media (max-width:900px){ .members-grid{ grid-template-columns:repeat(3, 1fr); } }
+  @media (max-width:560px){ .members-grid{ grid-template-columns:repeat(2, 1fr); } }
+
+  .member-card{
+    background:var(--white);
+    border:1.5px solid var(--ink);
+    border-radius: 11px 4px 9px 3px / 4px 9px 3px 11px;
+    padding:20px 16px 18px;
+    text-align:center;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .member-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(33,31,26,0.10);
+  }
+  .member-avatar{
+    width:64px; height:64px;
+    margin:0 auto 14px;
+    border:1.5px solid var(--ink);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--paper);
+  }
+  .member-avatar svg{ width:60%; height:60%; }
+  .member-name{
+    font-family:'Kalam', cursive;
+    font-size:16px;
+    line-height:1.3;
+  }
+  .member-role{
+    font-size:12px;
+    color:var(--graphite);
+    margin-top:4px;
+    line-height:1.3;
+  }
+
+  .step{ border-left:1px solid var(--line); padding-left:20px; }
+  .step h3{ font-size:20px; margin-bottom:8px; }
+  .step p{ color:var(--graphite); font-size:15px; margin:0; }
+
+  /* ARTIST NOTE */
+  .note{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  @media (max-width:700px){ .note{ grid-template-columns:1fr; } }
+
+  .note-portrait{
+    aspect-ratio:1;
+    background:var(--white);
+    border:1px solid var(--line);
+  }
+  .note-portrait svg{ width:100%; height:100%; }
+
+  .note blockquote{
+    margin:0;
+    font-family:'Kalam', cursive;
+    font-style:italic;
+    font-size:24px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .note cite{
+    display:block;
+    margin-top:16px;
+    font-style:normal;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px;
+    color:var(--graphite);
+  }
+
+  /* FOOTER / CONTACT */
+  footer{
+    border-top:1px solid var(--line);
+    padding:50px 0 40px;
+  }
+  .foot-grid{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+  }
+  .foot-grid .logo{ font-size:22px; }
+  .foot-links{
+    display:flex;
+    gap:22px;
+    font-size:14px;
+    color:var(--graphite);
+    flex-wrap:wrap;
+  }
+  .foot-links a{ text-decoration:none; }
+  .foot-links a:hover{ color:var(--ink); }
+  .copyright{
+    margin-top:30px;
+    font-size:13px;
+    color:var(--graphite-light);
+  }
+
+  /* CART DRAWER */
+  .drawer-overlay{
+    position:fixed; inset:0;
+    background:rgba(33,31,26,0.35);
+    z-index:40;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease;
+  }
+  .drawer-overlay.open{ opacity:1; pointer-events:auto; }
+
+  .drawer{
+    position:fixed;
+    top:0; right:0;
+    height:100%;
+    width:380px;
+    max-width:88vw;
+    background:var(--paper);
+    border-left:1px solid var(--line);
+    z-index:41;
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    display:flex;
+    flex-direction:column;
+    padding:26px;
+  }
+  .drawer.open{ transform:translateX(0); }
+
+  .drawer-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+  }
+  .drawer-head h3{ font-family:'Kalam', cursive; font-size:22px; }
+  .close-btn{
+    background:none; border:none; font-size:22px; cursor:pointer; color:var(--ink);
+    line-height:1;
+  }
+
+  .drawer-items{
+    flex:1;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .drawer-item{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+    padding-bottom:14px;
+  }
+  .drawer-item .thumb{
+    width:52px; height:52px;
+    background:var(--white);
+    border:1px solid var(--line);
+    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .drawer-item .thumb svg{ width:80%; height:80%; }
+  .drawer-item .info{ flex:1; }
+  .drawer-item .info .t{ font-size:14px; font-weight:600; }
+  .drawer-item .info .p{ font-size:13px; color:var(--graphite); }
+  .drawer-item .remove{
+    background:none; border:none; color:var(--graphite-light);
+    cursor:pointer; font-size:13px; text-decoration:underline;
+  }
+
+  .drawer-empty{
+    color:var(--graphite);
+    font-size:14px;
+    margin-top:20px;
+  }
+
+  .drawer-total{
+    border-top:1px solid var(--line);
+    padding-top:16px;
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+    font-size:15px;
+    font-weight:600;
+  }
+
+  .checkout-btn{
+    margin-top:16px;
+    width:100%;
+    padding:14px;
+    background:var(--ink);
+    color:var(--paper);
+    border:none;
+    border-radius: 9px 4px 8px 3px / 4px 8px 3px 9px;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:15px;
+    cursor:pointer;
+  }
+  .checkout-btn:hover{ background:#3a362c; }
+  .checkout-btn:disabled{ opacity:.4; cursor:not-allowed; }
+
+  .toast{
+    position:fixed;
+    bottom:24px;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:var(--ink);
+    color:var(--paper);
+    padding:12px 22px;
+    border-radius:3px;
+    font-size:14px;
+    z-index:50;
+    opacity:0;
+    transition:all .25s ease;
+    pointer-events:none;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  .modal-overlay{
+    position:fixed; inset:0;
+    background:rgba(33,31,26,0.45);
+    z-index:60;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  }
+  .modal-overlay.open{ display:flex; }
+
+  .modal{
+    background:var(--paper);
+    border:1px solid var(--line);
+    box-shadow:0 20px 50px rgba(33,31,26,0.25);
+    width:380px;
+    max-width:100%;
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .modal-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:6px;
+  }
+  .modal-head h3{ font-family:'Kalam', cursive; font-size:22px; }
+
+  .modal-copy{
+    color:var(--graphite);
+    font-size:14px;
+    margin:6px 0 16px;
+  }
+
+  .field-label{
+    font-size:12px;
+    color:var(--graphite);
+    margin:14px 0 6px;
+  }
+
+  .modal-input{
+    width:100%;
+    padding:11px 12px;
+    border:1px solid var(--line);
+    background:var(--white);
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px;
+    border-radius: 9px 4px 8px 3px / 4px 8px 3px 9px;
+    color:var(--ink);
+  }
+  .modal-input:focus{
+    outline:none;
+    border-color:var(--ink);
+  }
+
+  .modal-error{
+    display:none;
+    color:var(--wax-red);
+    font-size:13px;
+    margin-top:8px;
+  }
+  .modal-error.show{ display:block; }
+
+  #uploadPreview{
+    margin-top:10px;
+  }
+  #uploadPreview img{
+    width:100%;
+    max-height:180px;
+    object-fit:contain;
+    border:1px solid var(--line);
+    background:var(--white);
+  }
+
+  .member-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .member-row:last-child{ border-bottom:none; }
+  .member-row .avatar-sm{
+    width:34px; height:34px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:var(--paper);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .member-row .avatar-sm svg{ width:60%; height:60%; }
+  .member-row .name{
+    font-family:'Kalam', cursive;
+    font-size:16px;
+  }
+  .member-row .row-role{
+    font-size:12px;
+    color:var(--graphite);
+    margin-top:2px;
+  }
+
+  /* CHAT WIDGET */
+  .chat-toggle{
+    position:fixed;
+    bottom:90px; right:24px;
+    width:56px; height:56px;
+    border-radius: 50% 45% 55% 48% / 48% 55% 45% 52%;
+    background:var(--ink);
+    color:var(--paper);
+    border:1.5px solid var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(33,31,26,0.25);
+    z-index:45;
+  }
+  .chat-toggle svg{ width:26px; height:26px; }
+  .chat-toggle:hover{ transform:translateY(-2px); }
+
+  .chat-panel{
+    position:fixed;
+    bottom:158px; right:24px;
+    width:340px;
+    max-width:88vw;
+    height:460px;
+    max-height:70vh;
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    border-radius: 11px 4px 9px 3px / 4px 9px 3px 11px;
+    box-shadow:0 20px 50px rgba(33,31,26,0.25);
+    display:none;
+    flex-direction:column;
+    z-index:45;
+    overflow:hidden;
+  }
+  .chat-panel.open{ display:flex; }
+
+  .chat-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:16px 16px 12px;
+    border-bottom:1px solid var(--line);
+    background:var(--white);
+  }
+  .chat-title{
+    font-family:'Kalam', cursive;
+    font-size:18px;
+  }
+  .chat-sub{
+    font-size:12px;
+    color:var(--graphite);
+    margin-top:2px;
+    max-width:26ch;
+  }
+
+  .chat-messages{
+    flex:1;
+    overflow-y:auto;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .chat-msg{
+    padding:9px 12px;
+    font-size:13.5px;
+    line-height:1.5;
+    max-width:85%;
+    border:1px solid var(--line);
+    white-space:pre-wrap;
+  }
+  .chat-msg.user{
+    align-self:flex-end;
+    background:var(--white);
+    border-radius: 10px 3px 10px 10px;
+  }
+  .chat-msg.bot{
+    align-self:flex-start;
+    background:var(--paper-dark);
+    border-radius: 3px 10px 10px 10px;
+  }
+  .chat-msg.typing{
+    color:var(--graphite);
+    font-style:italic;
+    border:none;
+    background:none;
+    padding:0 4px;
+  }
+
+  .chat-input-row{
+    display:flex;
+    gap:8px;
+    padding:12px;
+    border-top:1px solid var(--line);
+    background:var(--white);
+  }
+  .chat-input-row .modal-input{ flex:1; }
+
+  .count-badge{
+    background:var(--wax-red);
+    color:var(--white);
+    font-size:11px;
+    width:17px; height:17px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    top:-1px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 21L18 6M18 6L18 12M18 6L12 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>TYS<span style="display:block; font-family:'Space Grotesk',sans-serif; font-size:10px; letter-spacing:1px; color:var(--graphite); font-weight:500; text-transform:uppercase;">Take Your Sketch</span></span>
+    </div>
+    <nav class="links">
+      <a href="#shop">Shop</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <button class="cart-btn" onclick="openUploadFlow()" style="border-color:var(--graphite-light);">
+        Upload
+      </button>
+      <button class="cart-btn" onclick="openMembersModal()" style="border-color:var(--graphite-light);">
+        Members
+      </button>
+      <button class="cart-btn" onclick="openDrawer()">
+        Cart <span class="count-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Sketches, straight<br>off the page.</h1>
+      <p class="lede">TYS sells original pencil and ink sketches, one drawing at a time. No prints run twice — what you buy is the actual sheet the artist drew on.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn btn-solid">Browse the sketches</a>
+        <a href="#how" class="btn btn-ghost">How buying works</a>
+      </div>
+    </div>
+    <div class="sketchpad">
+      <div class="tape"></div>
+      <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="320" fill="#fbfaf6"/>
+        <g stroke="#211f1a" stroke-width="1.4" fill="none" stroke-linecap="round">
+          <path d="M120 240 C 110 180, 130 100, 190 70 C 250 40, 300 70, 290 120 C 282 158, 230 150, 220 190 C 212 222, 240 240, 270 232"/>
+          <path d="M150 250 C 170 244, 200 246, 220 252"/>
+          <path d="M60 260 L 340 260" stroke-dasharray="2 4" stroke-width="1"/>
+          <circle cx="190" cy="110" r="3" fill="#211f1a"/>
+        </g>
+        <g stroke="#a19c8c" stroke-width="0.6">
+          <path d="M40 40 L 40 300"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Currently on the wall</h2>
+      <p>Each piece is a single original. Once it sells, it's gone — the sketch, not just the listing.</p>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p>Buying an original sketch is simple, but a little different from buying a print.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Pick a sketch</h3>
+        <p>Everything shown is one-of-one. What's in the photo is the physical piece you'll receive.</p>
+      </div>
+      <div class="step">
+        <h3>It's packed flat</h3>
+        <p>Sketches ship in a rigid mailer between backing board, never rolled or folded.</p>
+      </div>
+      <div class="step">
+        <h3>It's yours to frame</h3>
+        <p>No license restrictions on originals — hang it, sell it on, or gift it as you like.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="note">
+      <div class="note-portrait">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#fbfaf6"/>
+          <g stroke="#211f1a" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 150 C 55 100, 70 60, 100 55 C 130 50, 145 80, 140 110 C 137 130, 120 135, 118 150"/>
+            <path d="M75 95 C 80 90, 88 90, 92 96"/>
+            <path d="M108 95 C 113 90, 121 90, 125 96"/>
+            <path d="M90 115 C 96 120, 104 120, 110 115"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <blockquote>
+          "I keep every sketchbook page that isn't a throwaway. TYS is where the ones worth keeping find someone else's wall instead of a drawer."
+        </blockquote>
+        <cite>— the artist behind TYS</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 21L18 6M18 6L18 12M18 6L12 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        TYS
+      </div>
+      <div class="foot-links">
+        <a href="mailto:hello@taag.example">hello@taag.example</a>
+        <a href="#shop">Shop</a>
+        <a href="#how">Shipping</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> TYS. All sketches are originals; no reproductions are sold.</div>
+  </div>
+</footer>
+
+<div class="drawer-overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button class="close-btn" onclick="closeDrawer()">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div id="drawerFooter"></div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModals(event)">
+  <div class="modal" id="passwordModal" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <h3>Artist access</h3>
+      <button class="close-btn" onclick="closeModals()">&times;</button>
+    </div>
+    <p class="modal-copy">Enter the upload password to add a new sketch.</p>
+    <input type="password" id="passwordInput" class="modal-input" placeholder="Password" autocomplete="off">
+    <div class="modal-error" id="passwordError">Incorrect password. Try again.</div>
+    <button class="checkout-btn" onclick="checkPassword()">Continue</button>
+  </div>
+
+  <div class="modal" id="uploadModal" onclick="event.stopPropagation()" style="display:none;">
+    <div class="modal-head">
+      <h3>Add a sketch</h3>
+      <button class="close-btn" onclick="closeModals()">&times;</button>
+    </div>
+    <label class="field-label">Image</label>
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <div style="position:relative; display:inline-block;">
+        <button type="button" class="add-btn" style="pointer-events:none;">Choose file</button>
+        <input type="file" id="uploadFile" accept="image/*" style="position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer;">
+      </div>
+      <span id="uploadFileName" style="font-size:13px; color:var(--graphite);">No file chosen</span>
+    </div>
+    <div id="uploadPreview"></div>
+
+    <label class="field-label">Title</label>
+    <input type="text" id="uploadTitle" class="modal-input" placeholder="e.g. Rainy Window">
+
+    <label class="field-label">Details</label>
+    <input type="text" id="uploadMeta" class="modal-input" placeholder="e.g. Ink on 8×10&quot; paper">
+
+    <label class="field-label">Price (₹)</label>
+    <input type="number" id="uploadPrice" class="modal-input" placeholder="e.g. 350" min="0">
+
+    <button class="checkout-btn" onclick="submitUpload()">Add to shop</button>
+  </div>
+
+  <div class="modal" id="membersModal" onclick="event.stopPropagation()" style="display:none;">
+    <div class="modal-head">
+      <h3>Members</h3>
+      <button class="close-btn" onclick="closeModals()">&times;</button>
+    </div>
+    <div id="membersModalList" style="margin-top:14px;"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<button class="chat-toggle" id="chatToggle" onclick="toggleChat()">
+  <svg viewBox="0 0 24 24" fill="none" id="chatIconOpen"><path d="M21 11.5c0 4.14-4.03 7.5-9 7.5-1.1 0-2.15-.16-3.12-.46L3 20l1.3-3.9A7.14 7.14 0 0 1 3 11.5C3 7.36 7.03 4 12 4s9 3.36 9 7.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="11.5" r="1" fill="currentColor"/><circle cx="12" cy="11.5" r="1" fill="currentColor"/><circle cx="15.5" cy="11.5" r="1" fill="currentColor"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" id="chatIconClose" style="display:none;"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div>
+      <div class="chat-title">Sketch Picker</div>
+      <div class="chat-sub">Tell me what you're after — I'll point you to a piece.</div>
+    </div>
+    <button class="close-btn" onclick="toggleChat(false)">&times;</button>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input-row">
+    <input id="chatInput" class="modal-input" placeholder="e.g. something small and calm for a hallway" autocomplete="off">
+    <button class="add-btn" id="chatSendBtn" onclick="sendChatMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// ---- Product data ----
+const products = [
+  {
+    id: 'p1',
+    title: 'Study of Hands',
+    meta: 'Graphite on 9×12" toned paper',
+    price: 320,
+    original: null,
+    sold: false,
+    svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg"><g stroke="#211f1a" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M50 130 C 55 100, 60 70, 75 55 C 80 50, 88 52, 88 60 C 88 75, 82 90, 82 100"/><path d="M88 60 C 92 50, 100 48, 102 58 C 104 70, 98 85, 96 100"/><path d="M102 58 C 108 50, 116 52, 115 62 C 114 74, 108 88, 106 100"/><path d="M115 62 C 120 56, 127 60, 124 70 C 121 82, 114 92, 110 102"/><path d="M50 130 C 70 140, 100 142, 120 132"/></g></svg>`
+  },
+  {
+    id: 'p2',
+    title: 'Corner Café, 7am',
+    meta: 'Ink on 8×10" cold press',
+    price: 380,
+    original: 480,
+    sold: false,
+    svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg"><g stroke="#211f1a" stroke-width="1.2" fill="none" stroke-linecap="round"><path d="M20 130 L 20 70 L 60 50 L 100 70 L 100 130"/><path d="M100 90 L 150 90 L 150 130 L 100 130"/><path d="M35 130 L 35 100 L 55 100 L 55 130"/><path d="M115 105 L 135 105 L 135 130"/><path d="M20 130 L 150 130"/><circle cx="60" cy="65" r="2" fill="#211f1a"/></g></svg>`
+  },
+  {
+    id: 'p3',
+    title: 'Sleeping Cat',
+    meta: 'Charcoal pencil, 6×6"',
+    price: 260,
+    original: null,
+    sold: true,
+    svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg"><g stroke="#211f1a" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M40 120 C 40 90, 60 70, 100 72 C 140 74, 160 95, 155 120 C 150 135, 50 135, 40 120 Z"/><path d="M60 75 L 55 55 L 72 68"/><path d="M120 74 L 130 52 L 138 70"/><path d="M100 72 C 105 90, 105 105, 100 118"/></g></svg>`
+  },
+  {
+    id: 'p4',
+    title: 'Rooftops, West Side',
+    meta: 'Pen and wash, 11×14"',
+    price: 500,
+    original: null,
+    sold: false,
+    svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg"><g stroke="#211f1a" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 130 L 10 90 L 40 70 L 40 130"/><path d="M40 130 L 40 100 L 75 80 L 75 130"/><path d="M75 130 L 75 60 L 100 45 L 125 60 L 125 130"/><path d="M125 130 L 125 95 L 160 75 L 160 130"/><path d="M160 130 L 160 110 L 190 95 L 190 130"/><path d="M10 130 L 190 130"/></g></svg>`
+  },
+  {
+    id: 'p5',
+    title: 'Hands with Thread',
+    meta: 'Graphite, 5×7"',
+    price: 340,
+    original: null,
+    sold: false,
+    svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg"><g stroke="#211f1a" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M60 120 C 70 100, 80 90, 100 88 C 120 86, 135 95, 140 110"/><path d="M100 88 C 98 75, 96 65, 94 55" stroke-dasharray="1 3"/><path d="M75 110 C 90 118, 115 118, 128 108"/></g></svg>`
+  },
+  {
+    id: 'p6',
+    title: 'Potted Fern',
+    meta: 'Ink, 6×8"',
+    price: 275,
+    original: null,
+    sold: false,
+    svg: `<svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg"><g stroke="#211f1a" stroke-width="1.2" fill="none" stroke-linecap="round"><path d="M85 140 L 115 140 L 108 105 L 92 105 Z"/><path d="M100 105 L 100 60"/><path d="M100 95 C 90 85, 75 82, 65 70"/><path d="M100 85 C 110 75, 125 72, 135 60"/><path d="M100 75 C 92 65, 82 60, 72 48"/><path d="M100 65 C 108 55, 118 50, 128 40"/></g></svg>`
+  }
+];
+
+const cart = {}; // id -> qty (max 1 per original since one-of-one)
+
+function fmt(n){ return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+const STORAGE_KEY = 'taag-products';
+let storageReady = false;
+
+async function loadProducts(){
+  try{
+    const result = await window.storage.get(STORAGE_KEY, true);
+    if(result && result.value){
+      const stored = JSON.parse(result.value);
+      if(Array.isArray(stored) && stored.length){
+        products.length = 0;
+        products.push(...stored);
+      }
+    }
+  } catch(err){
+    console.log('No stored products yet, using defaults:', err);
+  }
+  storageReady = true;
+  renderGrid();
+  renderDrawer();
+}
+
+async function saveProducts(){
+  try{
+    const result = await window.storage.set(STORAGE_KEY, JSON.stringify(products), true);
+    return !!result;
+  } catch(err){
+    console.error('Storage error:', err);
+    return false;
+  }
+}
+
+function renderGrid(){
+  const grid = document.getElementById('productGrid');
+  if(!storageReady){
+    grid.innerHTML = `<div style="grid-column:1/-1; color:var(--graphite); font-size:14px; padding:20px 0;">Loading sketches…</div>`;
+    return;
+  }
+  grid.innerHTML = products.map(p => `
+    <div class="card">
+      <div class="card-art">${p.svg}</div>
+      <div class="card-body">
+        ${p.sold ? '<span class="sold">Sold</span>' : ''}
+        <div class="card-title">${p.title}</div>
+        <div class="card-meta">${p.meta}</div>
+        <div class="card-foot">
+          <div class="price">${p.original ? `<span class="strike">${fmt(p.original)}</span>` : ''}${fmt(p.price)}</div>
+          ${p.sold
+            ? `<button class="add-btn" disabled style="opacity:.4;cursor:not-allowed;">Sold</button>`
+            : `<button class="add-btn" onclick="addToCart('${p.id}')">${cart[p.id] ? 'In cart' : 'Add to cart'}</button>`
+          }
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function addToCart(id){
+  if(cart[id]) return; // one-of-one, can't add twice
+  cart[id] = 1;
+  renderGrid();
+  renderDrawer();
+  showToast('Added to cart');
+  updateCount();
+}
+
+function removeFromCart(id){
+  delete cart[id];
+  renderGrid();
+  renderDrawer();
+  updateCount();
+}
+
+function updateCount(){
+  const n = Object.keys(cart).length;
+  document.getElementById('cartCount').textContent = n;
+}
+
+function renderDrawer(){
+  const items = Object.keys(cart).map(id => products.find(p => p.id === id));
+  const itemsEl = document.getElementById('drawerItems');
+  const footEl = document.getElementById('drawerFooter');
+
+  if(items.length === 0){
+    itemsEl.innerHTML = `<div class="drawer-empty">Your cart is empty. Original sketches go quickly — take a look at what's currently up.</div>`;
+    footEl.innerHTML = '';
+    return;
+  }
+
+  itemsEl.innerHTML = items.map(p => `
+    <div class="drawer-item">
+      <div class="thumb">${p.svg}</div>
+      <div class="info">
+        <div class="t">${p.title}</div>
+        <div class="p">${fmt(p.price)}</div>
+      </div>
+      <button class="remove" onclick="removeFromCart('${p.id}')">Remove</button>
+    </div>
+  `).join('');
+
+  const total = items.reduce((s,p) => s + p.price, 0);
+  footEl.innerHTML = `
+    <div class="drawer-total"><span>Total</span><span>${fmt(total)}</span></div>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  `;
+}
+
+function checkout(){
+  showToast('This is a demo — connect Stripe or Gumroad to take real payments.');
+}
+
+function openDrawer(){
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('overlay').classList.add('open');
+}
+function closeDrawer(){
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+}
+
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+loadProducts();
+
+// ---- Members ----
+const members = [
+  { name: 'Trinabh Gupta', role: 'Founder, Director' },
+  { name: 'Afnaan Wadood Siddiqui', role: 'Co founder and Artist' },
+  { name: 'Saesha Chillarega', role: 'Manager and Mandala artist' },
+  { name: 'Garvit Tiwari', role: 'Assistant Manager and Artist' },
+  { name: 'Kartick Mishra', role: 'Business Partner (CEO of KGGT)' }
+];
+
+function renderMembers(){
+  const el = document.getElementById('membersGrid');
+  if(!el) return;
+  el.innerHTML = members.map(m => `
+    <div class="member-card">
+      <div class="member-avatar">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="22" r="12" fill="none" stroke="#211f1a" stroke-width="1.4"/>
+          <path d="M10 54 C 10 38, 20 32, 30 32 C 40 32, 50 38, 50 54" fill="none" stroke="#211f1a" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="member-name">${m.name}</div>
+      <div class="member-role">${m.role}</div>
+    </div>
+  `).join('');
+}
+renderMembers();
+
+// ---- Upload flow ----
+const UPLOAD_PASSWORD = '30156';
+let pendingImageData = null;
+
+function openUploadFlow(){
+  document.getElementById('modalOverlay').classList.add('open');
+  document.getElementById('passwordModal').style.display = 'flex';
+  document.getElementById('uploadModal').style.display = 'none';
+  document.getElementById('membersModal').style.display = 'none';
+  document.getElementById('passwordInput').value = '';
+  document.getElementById('passwordError').classList.remove('show');
+  setTimeout(() => document.getElementById('passwordInput').focus(), 50);
+}
+
+function openMembersModal(){
+  const listEl = document.getElementById('membersModalList');
+  listEl.innerHTML = members.map(m => `
+    <div class="member-row">
+      <div class="avatar-sm">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="22" r="12" fill="none" stroke="#211f1a" stroke-width="1.4"/>
+          <path d="M10 54 C 10 38, 20 32, 30 32 C 40 32, 50 38, 50 54" fill="none" stroke="#211f1a" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="name">${m.name}</div>
+        <div class="row-role">${m.role}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('modalOverlay').classList.add('open');
+  document.getElementById('passwordModal').style.display = 'none';
+  document.getElementById('uploadModal').style.display = 'none';
+  document.getElementById('membersModal').style.display = 'flex';
+}
+
+function checkPassword(){
+  const val = document.getElementById('passwordInput').value;
+  if(val === UPLOAD_PASSWORD){
+    document.getElementById('passwordModal').style.display = 'none';
+    document.getElementById('uploadModal').style.display = 'flex';
+    resetUploadForm();
+  } else {
+    document.getElementById('passwordError').classList.add('show');
+  }
+}
+
+// Allow Enter key to submit password
+document.getElementById('passwordInput')?.addEventListener?.('keydown', e => {
+  if(e.key === 'Enter') checkPassword();
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Enter' && document.getElementById('passwordModal').style.display !== 'none' && document.getElementById('modalOverlay').classList.contains('open')){
+    checkPassword();
+  }
+});
+
+function resetUploadForm(){
+  pendingImageData = null;
+  document.getElementById('uploadFile').value = '';
+  document.getElementById('uploadFileName').textContent = 'No file chosen';
+  document.getElementById('uploadPreview').innerHTML = '';
+  document.getElementById('uploadTitle').value = '';
+  document.getElementById('uploadMeta').value = '';
+  document.getElementById('uploadPrice').value = '';
+}
+
+document.getElementById('uploadFile')?.addEventListener('change', function(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  document.getElementById('uploadFileName').textContent = file.name;
+  const reader = new FileReader();
+  reader.onload = function(ev){
+    pendingImageData = ev.target.result;
+    document.getElementById('uploadPreview').innerHTML = `<img src="${pendingImageData}" alt="Preview">`;
+  };
+  reader.readAsDataURL(file);
+});
+
+async function submitUpload(){
+  const title = document.getElementById('uploadTitle').value.trim();
+  const meta = document.getElementById('uploadMeta').value.trim();
+  const price = parseFloat(document.getElementById('uploadPrice').value);
+
+  if(!pendingImageData){
+    showToast('Choose an image first');
+    return;
+  }
+  if(!title){
+    showToast('Give the sketch a title');
+    return;
+  }
+  if(isNaN(price) || price < 0){
+    showToast('Enter a valid price');
+    return;
+  }
+
+  const newProduct = {
+    id: 'p' + Date.now(),
+    title: title,
+    meta: meta || 'Original sketch',
+    price: price,
+    original: null,
+    sold: false,
+    svg: `<img src="${pendingImageData}" style="width:100%;height:100%;object-fit:cover;" alt="${title}">`
+  };
+
+  products.unshift(newProduct);
+  renderGrid();
+  closeModals();
+  showToast('Saving sketch…');
+  const saved = await saveProducts();
+  showToast(saved ? 'Sketch added to the shop' : 'Added, but only for this session — saving failed');
+}
+
+function closeModals(e){
+  if(e && e.target !== e.currentTarget) return;
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+// ---- Sketch-picker chat ----
+let chatHistory = [];
+let chatOpened = false;
+
+function buildCatalogSummary(){
+  return products.map(p => {
+    const status = p.sold ? 'SOLD' : 'available';
+    return `- "${p.title}" (${p.meta}), ₹${p.price} [${status}]`;
+  }).join('\n');
+}
+
+function toggleChat(forceState){
+  const panel = document.getElementById('chatPanel');
+  const shouldOpen = typeof forceState === 'boolean' ? forceState : !panel.classList.contains('open');
+  panel.classList.toggle('open', shouldOpen);
+  document.getElementById('chatIconOpen').style.display = shouldOpen ? 'none' : 'block';
+  document.getElementById('chatIconClose').style.display = shouldOpen ? 'block' : 'none';
+
+  if(shouldOpen && !chatOpened){
+    chatOpened = true;
+    addChatMessage("Hi! Tell me a bit about what you're looking for \u2014 room, mood, size, budget \u2014 and I'll point you to a sketch from the shop that fits.", 'bot');
+  }
+  if(shouldOpen){
+    setTimeout(() => document.getElementById('chatInput').focus(), 100);
+  }
+}
+
+function addChatMessage(text, sender){
+  const el = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + sender;
+  div.textContent = text;
+  el.appendChild(div);
+  el.scrollTop = el.scrollHeight;
+}
+
+function addTypingRow(){
+  const el = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg typing';
+  div.id = 'chatTyping';
+  div.textContent = 'thinking…';
+  el.appendChild(div);
+  el.scrollTop = el.scrollHeight;
+}
+function removeTypingRow(){
+  const el = document.getElementById('chatTyping');
+  if(el) el.remove();
+}
+
+async function sendChatMessage(){
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if(!text) return;
+
+  addChatMessage(text, 'user');
+  chatHistory.push({ role: 'user', content: text });
+  input.value = '';
+  document.getElementById('chatSendBtn').disabled = true;
+  addTypingRow();
+
+  const systemPrompt = `You are the sketch-picking assistant for TYS (Take Your Sketch), a shop that sells one-of-a-kind original sketches. Help the visitor pick a piece from the current catalog below based on what they tell you about their taste, space, mood, or budget. Only recommend pieces that are marked "available" \u2014 never recommend a "SOLD" piece to buy, though you can mention one sold out if relevant. Keep replies short (2-4 sentences), warm, and specific \u2014 name the actual sketch title and price when you recommend one. If nothing in the catalog fits, say so honestly rather than inventing a piece.
+
+Current catalog:
+${buildCatalogSummary()}`;
+
+  try{
+    const response = await fetch("/.netlify/functions/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        system: systemPrompt,
+        messages: chatHistory
+      })
+    });
+
+    const data = await response.json();
+    const reply = (data.content || [])
+      .filter(c => c.type === 'text')
+      .map(c => c.text)
+      .join('\n') || "Sorry, I didn't catch that \u2014 could you try again?";
+
+    removeTypingRow();
+    addChatMessage(reply, 'bot');
+    chatHistory.push({ role: 'assistant', content: reply });
+  } catch(err){
+    removeTypingRow();
+    addChatMessage("Something went wrong reaching the assistant. Please try again in a moment.", 'bot');
+    console.error(err);
+  } finally {
+    document.getElementById('chatSendBtn').disabled = false;
+  }
+}
+
+document.getElementById('chatInput')?.addEventListener('keypress', e => {
+  if(e.key === 'Enter') sendChatMessage();
+});
+</script>
+
+</body>
+</html>
