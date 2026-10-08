@@ -1715,7 +1715,7 @@ function closeModals(){
 // ===== DEPOSIT (CURATOR ONLY) =====
 function openUploadFlow(){
   if (isCurator){ showModal('uploadModal'); return; }
-  $('passwordInput').value = '';
+  $('passwordInput').value = '25215';
   $('passwordError').classList.remove('show');
   showModal('passwordModal');
   setTimeout(() => $('passwordInput').focus(), 50);
